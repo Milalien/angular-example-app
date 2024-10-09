@@ -1,4 +1,4 @@
-<h1>
+<h1 id="header">
     {{headerText}}
 </h1>
 <div class="container">
@@ -29,7 +29,7 @@
         </mat-form-field>
 
         <mat-form-field class="field-full-width">
-            <input matInput placeholder="email" formControlName="email">
+            <input matInput placeholder="email" formControlName="email" id="email">
             <mat-error *ngIf="email?.hasError('required')">Enter your email address</mat-error>
             <mat-error *ngIf="email?.hasError('email')">Must be valid email</mat-error>
         </mat-form-field>
