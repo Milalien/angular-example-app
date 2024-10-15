@@ -9,13 +9,9 @@ describe('FeedbackComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeedbackComponent ],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA,
-        NO_ERRORS_SCHEMA
-      ]
-    })
-    .compileComponents();
+      declarations: [FeedbackComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(FeedbackComponent);
     component = fixture.componentInstance;
@@ -25,11 +21,13 @@ describe('FeedbackComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-   it('should render title', () => {
+  it('should render title', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('#header')?.textContent).toContain('Give feedback');
-   });
+    expect(compiled.querySelector('#header')?.textContent).toContain(
+      'Give feedback',
+    );
+  });
   it('should display email on the placeholder for the email field', () => {
     const el = fixture.debugElement.query(By.css('#email'));
     expect(el.nativeElement.getAttribute('placeholder')).toEqual('email');
@@ -50,7 +48,7 @@ describe('FeedbackComponent', () => {
   });
   it('should mark field "email" as invalid when it has wrong input', () => {
     const ctrl = component.fbForm.get('email');
-    ctrl?.setValue('milla@gmail.com');
+    ctrl?.setValue('xx');
     fixture.detectChanges();
 
     expect(ctrl?.invalid).toBeTruthy();

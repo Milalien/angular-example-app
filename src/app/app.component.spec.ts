@@ -1,20 +1,14 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-      schemas: [
-        CUSTOM_ELEMENTS_SCHEMA
-      ]
+      imports: [RouterModule.forRoot],
+      declarations: [AppComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   });
 
@@ -34,6 +28,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.toolbar span')?.textContent).toContain('Dev-ops-kurssin harjoitusprojekti');
+    expect(compiled.querySelector('.toolbar span')?.textContent).toContain(
+      'Dev-ops-kurssin harjoitusprojekti',
+    );
   });
 });
