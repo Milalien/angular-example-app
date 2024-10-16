@@ -8,5 +8,19 @@
     "arrowParens": "avoid",
     "htmlWhitespaceSensitivity": "css",
     "printWidth": 80,
-    "endOfLine": "auto"
+    "endOfLine": "auto",
+    "overrides": [
+    {
+      "files": ".html",
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
+      "files": ".component.html",
+      "options": {
+        "parser": "angular"
+      }
+    }
+  ]
 }
