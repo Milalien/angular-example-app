@@ -1,28 +1,21 @@
 # AngularExampleApp
 
 This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
-Since then, the Angular version has been updated to 15.2.
+Since then, the Angular version has been updated to 18.2.
 
-## Development server
+## Usage:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This repository was cloned and edited as a part of my DevOps course.
 
-## Code scaffolding
+## Assignments
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+We added a CHANGELOG file and learned about the usage of Tags etc. I didn't end up adding later changes there since only one assignment required us to do so.
 
-## Build
+I added some unit tests for the "feedback" component that go through the functionality of the form.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+We added and configured ESLint on the project.
 
-## Running unit tests
+### Github actions and Azure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+We created a workflow to build, test and deploy the app to Azure.
+We learned how to create a docker image etc, and to create the web app on Azure.
