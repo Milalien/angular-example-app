@@ -12,6 +12,7 @@ This repository was cloned and edited as a part of my DevOps course.
 We added a CHANGELOG file and learned about the usage of Tags etc. I didn't end up adding later changes there since only one assignment required us to do so.
 
 I added some unit tests for the "feedback" component that go through the functionality of the form.
+This included configurating karma.
 
 We added and configured ESLint on the project.
 
